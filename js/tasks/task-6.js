@@ -8,8 +8,13 @@
 
  */
 
-// let weight = '88,3';
-// let height = '1.75';
+const weight = '88,3';
+const height = '1.75';
 
-// const bmi = ;
-// console.log(bmi); // 28.8
+const weightNormalized = weight.replace(',', '.');
+const heightNormalized = height.replace(',', '.');
+
+// const bmi = weightNormalized / (heightNormalized * heightNormalized);
+const bmi = weightNormalized / (Math.pow(heightNormalized, 2));
+
+console.log(bmi.toFixed(1)); // 28.8
